@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.test.Login_activity" >
+    <RelativeLayout  
+        android:id="@+id/registerTitle"  
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"  
+        android:layout_alignParentTop="true" >  
+  
+        <TextView  
+            android:layout_width="fill_parent"  
+            android:layout_height="44dp"  
+            android:background="@drawable/app"  
+            android:gravity="center"  
+            android:textColor="@android:color/white"  
+            android:textSize="18sp" />  
+    </RelativeLayout>
+    
+    
+    
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerTitle">"
+
+       <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/workerNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="员工姓名" />
+
+            <EditText
+                android:id="@+id/workerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10" 
+                android:maxLength="50"
+                />
+
+            <TextView
+                android:id="@+id/workerUsernameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登陆账号" />
+
+            <EditText
+                android:id="@+id/workerUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10" 
+                android:maxLength="50"
+                />
+            <TextView
+                android:id="@+id/passwordText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密码" />
+
+            <EditText
+                android:id="@+id/workerPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberPassword" 
+                android:maxLength="50"
+                />
+
+            <TextView
+                android:id="@+id/workerSurePasswordText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确认密码" />
+
+            <EditText
+                android:id="@+id/workerSurePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberPassword" 
+                android:maxLength="50"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/workerRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="注册" />
+
+   
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Button"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/workerGoBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="返回" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

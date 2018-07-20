@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" >
+
+			<TextView
+			    android:id="@+id/orderIdText"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="保修单号  :" />
+
+			<TextView
+			    android:id="@+id/orderId"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="TextView" />
+
+		</LinearLayout>
+
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" >
+
+			<TextView
+			    android:id="@+id/roomIdText"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="保修宿舍   :" />
+
+			<TextView
+			    android:id="@+id/roomId"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="TextView" />
+
+		</LinearLayout>
+
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" >
+
+			<TextView
+			    android:id="@+id/studentIdText"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="报修人学号   :" />
+
+			<TextView
+			    android:id="@+id/studentId"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="TextView" />
+
+		</LinearLayout>
+
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" >
+
+			<TextView
+			    android:id="@+id/workerIdText"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="负责的员工号   :" />
+
+			<TextView
+			    android:id="@+id/workerId"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="TextView" />
+
+		</LinearLayout>
+
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" >
+
+			<TextView
+			    android:id="@+id/uploadDateText"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="提交日期   :" />
+
+			<TextView
+			    android:id="@+id/uploadDate"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="TextView" />
+
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" >
+
+			<TextView
+			    android:id="@+id/willFixDateText"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="预约日期  :" />
+
+			<TextView
+			    android:id="@+id/willFixDate"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="TextView" />
+
+		</LinearLayout>
+		
+				<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" >
+
+			<TextView
+			    android:id="@+id/finishDateText"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="完工日期  :" />
+
+			<TextView
+			    android:id="@+id/finishDate"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="TextView" />
+
+		</LinearLayout>
+		
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" >
+
+			<TextView
+			    android:id="@+id/dealText"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="是否处理 :" />
+
+			<TextView
+			    android:id="@+id/deal"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="TextView" />
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.multipart.maxSize" value="10485760"/> 
+	<package name="default" extends="struts-default">
+	     <interceptors>
+           <interceptor name="ManagerInterceptor" class="com.cyy.dorm.interceptor.ManagerInterceptor">
+        </interceptor>
+           <interceptor name="WorkerInterceptor" class="com.cyy.dorm.interceptor.WorkerInterceptor">
+        </interceptor>
+           <interceptor name="StudentInterceptor" class="com.cyy.dorm.interceptor.StudentInterceptor">
+        </interceptor>
+          <interceptor name="OrderInterceptor" class="com.cyy.dorm.interceptor.OrderInterceptor">
+        </interceptor>
+        </interceptors>
+	
+	
+		<action name="StudentAction" class="com.cyy.dorm.action.StudentAction">
+		  	<interceptor-ref name="defaultStack"></interceptor-ref>
+            <interceptor-ref name="StudentInterceptor"></interceptor-ref>
+			<result name="update success">/student_tis/success_upd.jsp</result>
+			<result name="update fail">/student_tis/fail_upd.jsp</result>
+			<result name="manager find student">/manager_stu.jsp</result>
+			<result name="manager not find student">/student_tis/fail_man.jsp</result>
+			<result name="delete student success">/student_tis/success_del.jsp</result>
+			<result name="delete student fail">/student_tis/fail_del.jsp</result>
+			<result name="back success">/student_con.jsp</result>
+			<result name="back fail">/login.jsp</result>
+			<result name="no login" >/login.jsp</result>
+		</action>
+	    <action name="WorkerAction" class="com.cyy.dorm.action.WorkerAction">
+	    	<interceptor-ref name="defaultStack"></interceptor-ref>
+            <interceptor-ref name="WorkerInterceptor"></interceptor-ref>
+			<result name="update success">/worker_tis/success.upd.jsp</result>
+			<result name="update fail">/worker_tis/fail_upd.jsp</result>
+			<result name="delete worker success">/worker_tis/success_del.jsp</result>
+			<result name="delete worker fail">/worker_tis/fail_del.jsp</result>
+			<result name="manager find worker">/manager_wor.jsp</result>
+			<result name="manager not find worker">/worker_tis/fail_man.jsp</result>
+			<result name="back success">/worker_con.jsp</result>
+			<result name="back fail">/login.jsp</result>
+			<result name="no login" >/login.jsp</result>
+	    </action>
+	    <action name="LoginAction" class="com.cyy.dorm.action.LoginAction">
+	     <result name="student login success">/student_con.jsp</result>
+	     <result name="student login fail">/login_fail/fail_login.jsp</result>
+	     <result name="manager login success">/manager_con.jsp</result>
+	     <result name="manager login fail">/login_fail/fail_login.jsp</result>
+	     <result name="worker login success">/worker_con.jsp</result>
+	     <result name="worker login fail">/login_fail/fail_login.jsp</result>
+	     <result name="login fail">/login_fail/fail_login.jsp</result>
+	     
+	    </action>
+        <action name="OrderAction" class="com.cyy.dorm.action.OrderAction">
+          <interceptor-ref name="defaultStack"></interceptor-ref>
+          <interceptor-ref name="OrderInterceptor"></interceptor-ref>
+          <result name="check student order">/student_ord.jsp</result>
+          <result name="check worker order">/worker_ord.jsp</result>
+          <result name="upload success">/order_tis/success_upl.jsp</result>
+          <result name="upload fail">/order_tis/fail_upl.jsp</result>
+          <result name="add deal order">/order_tis/success_add.jsp</result>
+          <result name="add deal fail">/order_tis/fail_add.jsp</result>
+          <result name="all book date success">/order_tis/success_date.jsp</result>
+          <result name="all book date fail">/order_tis/fail_date.jsp</result>
+          <result name="find order success">/manager_ord.jsp</result>
+          <result name="find order fail">/order_tis/fail_find.jsp</result>
+          <result name="delete order success">/order_tis/success_delO.jsp</result>
+          <result name="delete order fail">/order_tis/fail_delO.jsp</result>
+          <result name="manager update success">/order_tis/success_upd.jsp</result>
+          <result name="manager update fail">/order_tis/fail_upd.jsp</result>
+          <result name="stu find order detail">/student_detailOrder.jsp</result>
+          <result name="stu not find order detail">/order_tis/fail_find.jsp</result>
+          <result name="stu update success">/order_tis/success_upd.jsp</result>
+          <result name="stu update fail">/order_tis/fail_upd.jsp</result>
+          <result name="wor find order detail">/worker_detailOrder.jsp</result>
+          <result name="wor not find order detail">/order_tis/fail_find.jsp</result>
+          <result name="wor update success">/order_tis/success_upd.jsp</result>
+          <result name="wor update fail">/order_tis/fail_upd.jsp</result>
+          <result name="no login" >/login.jsp</result>
+        </action>
+	    <action name="RegisterAction" class="com.cyy.dorm.action.RegisterAction">
+	      <result name="register success">/tispage/success_reg.jsp</result>
+		  <result name="register fail">/tispage/fail_reg.jsp</result>
+	    </action>
+	       <action name="ManagerAction" class="com.cyy.dorm.action.ManagerAction">
+	           <interceptor-ref name="defaultStack"></interceptor-ref>
+               <interceptor-ref name="ManagerInterceptor"></interceptor-ref>
+	           <result name="check worker room">/manager_job.jsp</result>
+	           <result name="give job success">/manager_tis/success_giv.jsp</result>
+	           <result name="give job fail">/manager_tis/fail_giv.jsp</result>
+	           <result name="back success">/manager_con.jsp</result>
+			   <result name="back fail">/login.jsp</result>
+			   <result name="no login" >/login.jsp</result>
+	    </action>
+
+	</package>
+	   <package name="dorm" extends="json-default" >
+ 	          <action name="StudentJsonAction" class="com.cyy.dorm.action.phone.StudentJsonAction">
+	              <result type="json"/>
+	          </action>
+	          <action name="WorkerJsonAction" class="com.cyy.dorm.action.phone.WorkerJsonAction">
+	              <result type="json"/>
+	          </action>
+	            <action name="OrderJsonAction" class="com.cyy.dorm.action.phone.OrderJsonAction">
+	              <result type="json"/>
+	          </action>
+     </package>
+
+</struts>

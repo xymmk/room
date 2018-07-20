@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dorm"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.dorm.activity.activity_choise"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.dorm.activity.activity_workerLogin"
+            android:label="员工登陆" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+                <activity
+            android:name="com.dorm.activity.activity_studentLogin"
+            android:label="学生登陆" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+                      <activity
+            android:name="com.dorm.activity.activity_workerRegister"
+            android:label="员工注册" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+                      <activity
+            android:name="com.dorm.activity.activity_studentRegister"
+            android:label="学生注册" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+ 
+                   <activity
+            android:name="com.dorm.activity.activity_stuCheckOrder"
+            android:label="你相关的保修单" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                
+            </intent-filter>
+        </activity>
+                    <activity
+            android:name="com.dorm.activity.activity_stuDetail"
+            android:label="详细保修单" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                
+            </intent-filter>
+        </activity>
+              <activity
+            android:name="com.dorm.activity.activity_stuOrderUp"
+            android:label="提交新保修单" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                
+            </intent-filter>
+        </activity>
+        
+           <activity
+            android:name="com.dorm.activity.activity_worCheckOrder"
+            android:label="你相关的保修单" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                
+            </intent-filter>
+        </activity>
+          
+           <activity
+            android:name="com.dorm.activity.activity_worDetail"
+            android:label="详细保修单" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                
+            </intent-filter>
+        </activity>
+          <activity
+            android:name="com.dorm.activity.activity_worDetailn"
+            android:label="详细保修单" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                
+            </intent-filter>
+        </activity>
+           <activity
+            android:name="com.dorm.activity.activity_stuDetailn"
+            android:label="详细保修单" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
